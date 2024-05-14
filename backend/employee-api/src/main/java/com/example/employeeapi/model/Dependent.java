@@ -16,5 +16,6 @@ public class Dependent {
     private String contactNumber;
 
     @ManyToOne
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private Employee employee;
 }
