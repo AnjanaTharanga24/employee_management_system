@@ -3,6 +3,8 @@ package com.example.employeeapi.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
 @Table(name = "department")
@@ -14,6 +16,6 @@ public class Department {
     private String depId;
     private String depName;
 
-    @ManyToOne
-    private Employee employee;
+    @OneToMany(mappedBy = "department")
+    private List<Employee> employeeList;
 }

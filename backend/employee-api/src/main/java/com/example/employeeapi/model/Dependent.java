@@ -12,7 +12,7 @@ public class Dependent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String dependentName;
-    private String dependentAge;
+    private Integer dependentAge;
     private String contactNumber;
 
     @ManyToOne

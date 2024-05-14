@@ -15,17 +15,17 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String empName;
-    private String empAge;
+    private Integer empAge;
     private String empEmail;
     private String empMobile;
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    private LocalDate DOB;
+    private LocalDate dob;
 
-    @OneToMany(mappedBy = "employee")
-    private List<Department> departmentList;
+    @ManyToOne
+   private Department department;
 
     @OneToMany(mappedBy = "employee")
     private List<Dependent> dependentList;
