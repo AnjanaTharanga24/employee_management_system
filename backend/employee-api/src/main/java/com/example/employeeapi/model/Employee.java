@@ -1,5 +1,7 @@
 package com.example.employeeapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -24,9 +26,10 @@ public class Employee {
 
     private LocalDate dob;
 
-    @ManyToOne
-   private Department department;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Department department;
 
     @OneToMany(mappedBy = "employee")
+    @JsonBackReference
     private List<Dependent> dependentList;
 }

@@ -1,5 +1,6 @@
 package com.example.employeeapi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,5 +18,6 @@ public class Department {
     private String depName;
 
     @OneToMany(mappedBy = "department")
+    @JsonBackReference
     private List<Employee> employeeList;
 }
