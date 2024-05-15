@@ -127,7 +127,7 @@ export default function Register() {
             <h2 className='mb-4'>Work details</h2>
 
             <div className="form-group p-2">
-              <label className='mb-2' htmlFor="employeeName">Employee Name</label>
+              <label className='mb-2' htmlFor="employeeName">Department Name</label>
               <input
                 type="text"
                 className="form-control"
@@ -139,7 +139,7 @@ export default function Register() {
               />
             </div>
             <div className="form-group p-2">
-              <label className='mb-2' htmlFor="age">Age</label>
+              <label className='mb-2' htmlFor="age">Department Id</label>
               <input
                 type="text"
                 className="form-control"
@@ -150,20 +150,23 @@ export default function Register() {
                 onChange={handleInputChange}
               />
 
-              <div className="form-group p-2">
-                <label className='mb-2' htmlFor="email">Email</label>
-                <input
-                  type="email"
+              <div className="form-group p-3">
+                <label className='mb-2' htmlFor="gender">Job Position</label>
+                <select
                   className="form-control"
-                  id="email"
-                  name="email"
-                  placeholder="example@email.com"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
+
+                >
+                  <option value="">Select Position</option>
+                  <option value="male">Manager</option>
+                  <option value="female">Accountant</option>
+                  <option value="female">Superviser</option>
+                  <option value="female">Cleaner</option>
+
+
+                </select>
               </div>
 
-              <div className="form-group p-2">
+              {/* <div className="form-group p-2">
                 <label className='mb-2' htmlFor="mobileNumber">Mobile Number</label>
                 <input
                   type="text"
@@ -174,9 +177,9 @@ export default function Register() {
                   value={formData.mobileNumber}
                   onChange={handleInputChange}
                 />
-              </div>
+              </div> */}
 
-              <div className="form-group p-2">
+              {/* <div className="form-group p-2">
                 <label className='mb-2' htmlFor="datePicker">Date of Birth</label>
                 <div>
                   <DatePicker
@@ -203,7 +206,7 @@ export default function Register() {
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
-              </div>
+              </div> */}
 
             </div>
 
@@ -212,7 +215,7 @@ export default function Register() {
       case 3:
         return (
           <>
-                      <h2 className='mb-4'>Dependent details</h2>
+            <h2 className='mb-4'>Dependent details</h2>
             <div className="form-group p-2">
               <label className='mb-2' htmlFor="employeeName">Employee Name</label>
               <input
