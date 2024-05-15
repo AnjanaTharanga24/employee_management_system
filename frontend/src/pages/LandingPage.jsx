@@ -5,13 +5,16 @@ import Footer from '../components/Footer'
 export default function LandingPage() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
 
-      <div className='' style={{marginTop:"40px"}}>
+      <div className='' style={{ marginTop: "40px" }}>
         <h1>This is employee management landing page</h1>
       </div>
 
-      <Footer/>
+      <div className='' style={{marginTop:"510px"}}>
+        <Footer />
+      </div>
+
     </div>
   )
 }

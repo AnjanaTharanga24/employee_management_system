@@ -5,7 +5,7 @@ export default function Footer() {
         <div>
             <>
 
-                <footer className="text-center text-lg-start bg-dark text-muted shadow " style={{ marginTop: "590px" }}>
+                <footer className="text-center text-lg-start bg-dark text-muted shadow " >
                     
                     <section className="text-white p-3">
                         <div className="container text-center text-md-start mt-5">
